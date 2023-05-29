@@ -10,29 +10,36 @@
         height: 360px;
         width: 100%;
         object-fit:cover;
+        margin-bottom:16px;
       }
     </style>
   </head>
-
   <body>
+    {% include 'nav.html' %}
+    <img class ="img-fluid" id="banner" src ="https://python--sushildurgamaha.repl.co/static/sushil%20(3).jpg" height="320">
     <div class="container">
     <h1 class="text-center mt-2 mb-4">{{company_name}} solutions pvt ltd</h1>
-    <img class ="img-fluid" id="banner" src ="https://python--sushildurgamaha.repl.co/static/sushil%20(3).jpg" height="320">
-    <h2 class="text-center mt-2 mb-4">About us</h2>
+      <div class="row" style="margin-bottom:16px">
+        <div class="col-6">
     <p class="lead">
       Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
     </p>
-    <h2 class="text-center mt-2 mb-4">Open positions</h2>
+        </div>
+        <div class="col-md-6">
+        <img src="/static/yana.jpg" style="height:320px;border-radius:6px;">
+          </div>
+      </div>
+    <h2 class="text-center mt-2 mb-4">Job Openings</h2>
     <div>
       {% for job in jobs %}
         {% include 'jobitem.html' %}  
       {% endfor %}
     </div>
       <div class="text-center">
-    <button class="btn btn-primary btn-lg">Contact Us</button>
-        <p class="mt-4">Copyright @2023</p>
+    <a class="btn btn-primary btn-lg" href="mailto:dsushil6@gmail.com?subject=Question%20about%20job%20openings&body=My%20name%20%3A%20%3Cyour-name%3E%0D%0AMy%20questions%3A%20%3Cyour-Questions%3E">Contact Us</a>
       </div>
     </div>
+    {% include 'footer.html' %}
   </body>
 
 </html>
